@@ -1,103 +1,96 @@
-body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-      }
-      
-      .App {
-        text-align: center;
-        color: #333;
-      }
-      
-      .header {
-        display: flex;
+body { margin: 0;
+      font-family: Arial, sans-serif;
+}
+
+.App {text-align: center;
+      color: #333;
+}
+
+.header {display: inline-flex;
         justify-content: space-between;
         padding: 1rem;
-        background-color: #e0f7fa;
-      }
-      
-      .header h1 {
-        margin: 0;
-      }
-      
-      .header nav a {
-        margin: 0 1rem;
-        text-decoration: none;
-        color: #00796b;
-      }
-      
-      .hero {
-        padding: 2rem;
-        background-color: #a7ffeb;
-      }
-      
-      .hero h2 {
-        margin: 0.5rem 0;
-      }
-      
-      .appointment-button {
-        margin-top: 1rem;
+        align-items: flex-start;
+        background: #DDFFE7;
+}
+
+.header h1 {margin: 0;
+}
+
+.header nav a {margin: 0 1rem;
+              text-decoration: none;
+              color: #00796b;
+}
+
+.hero {padding: 2rem;
+}
+
+.hero h2 {margin: 0.5rem 0;}
+
+.appointment-button {margin-top: 1rem;
         padding: 0.5rem 1rem;
         background-color: #00796b;
         color: white;
         border: none;
         cursor: pointer;
-      }
-      
-      .hours-operation, .mission, .reviews, .contact {
+}
+
+.hours-operation {
         padding: 2rem;
         border-bottom: 1px solid #e0e0e0;
-      }
-      
-      .mission-button {
-        margin-top: 1rem;
+        text-align: left;
+        background: #DDFFE7;
+}
+
+.mission, .reviews, .contact {
+  padding: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.mission-button {margin-top: 1rem;
         padding: 0.5rem 1rem;
         background-color: #00796b;
         color: white;
         border: none;
         cursor: pointer;
-      }
-      
-      .reviews .review-images {
-        display: flex;
+}
+
+.reviews .review-images {display: flex;
         justify-content: center;
         gap: 2rem;
-      }
-      
-      .reviews .testimonials {
+}
+
+.reviews .testimonials {
         display: flex;
         justify-content: center;
         gap: 2rem;
         margin-top: 1rem;
-      }
-      
-      .reviews .testimonial {
+}
+
+.reviews .testimonial {
         border: 1px solid #e0e0e0;
         padding: 1rem;
         background-color: #ffffff;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-      
-      .review-button {
-        margin-top: 1rem;
+}
+
+.review-button {margin-top: 1rem;
         padding: 0.5rem 1rem;
         background-color: #00796b;
         color: white;
         border: none;
         cursor: pointer;
-      }
+}
       
-      .contact p {
-        margin: 0.5rem 0;
-      }
+.contact {margin: 0.5rem 0;
+        text-align: left;
+}
       
-      .footer {
-        padding: 1rem;
+.footer {padding: 1rem;
         background-color: #e0f7fa;
-      }
+}
       
-      .footer nav a {
-        margin: 0 1rem;
+.footer nav a {margin: 0 1rem;
         text-decoration: none;
         color: #00796b;
-      }
+}
       
