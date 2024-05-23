@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="App">
 
-      <header>
+    <header>
         <Link to="/">
           <h1>DPL</h1>
         </Link>
@@ -21,41 +21,63 @@ function Home() {
         </Link>
       </header>
 
-      <h2>Deez Plumbing LTD</h2>
+      <main>
+        <section className="hero">
+          <h2>Deez Plumbing LTD</h2>
+          <p>Local Plumbers for Local People.</p>
+          <button className="appointment-button">Book an Appointment</button>
+        </section>
 
-      <h4>Local Plumbers for Local People.</h4>
+        <section className="hours-operation">
+          <h3>Hours of Operation</h3>
+          <p>Weekdays: 4:00 PM - 11:00 PM</p>
+          <p>Weekends: 5:30 AM - 11:00 PM</p>
+          <p>Holidays: CLOSED</p>
+        </section>
 
-      <p>
-        Hours of operation<br />
-        Weekdays: 4:00 PM - 11:00 PM<br />
-        Weekends: 5:30 AM - 11:00 PM<br />
-        Holidays: CLOSED
-      </p>
+        <section id="our-mission" className="mission">
+          <h3>Our Mission</h3>
+          <p>Two apprentice plumbers pursuing their dreams, founding their own company with a vision for excellence in plumbing services and customer satisfaction.</p>
+          <button className="mission-button">More Info</button>
+        </section>
 
-      <Link to="/BookAppointment">
-        <button>Book Appointment</button>
-      </Link>
+        <section className="reviews">
+          <h3>Reviews and Testimonials</h3>
+          <div className="review-images">
+            <img src="before.jpg" alt="Before" />
+            <img src="after.jpg" alt="After" />
+          </div>
+          <div className="testimonials">
+            <div className="testimonial">
+              <p>"A heroic piece of praise!"</p>
+              <p>- Name</p>
+            </div>
+            <div className="testimonial">
+              <p>"A fantastic bit of feedback!"</p>
+              <p>- Name</p>
+            </div>
+            <div className="testimonial">
+              <p>"A genuinely glowing review!"</p>
+              <p>- Name</p>
+            </div>
+          </div>
+          <button className="review-button">Read more Reviews</button>
+        </section>
 
-      <h3>Reviews and Testimonials</h3>
+        <section id="contact-us" className="contact">
+          <h3>Contact Us</h3>
+          <p>Email: Deezplumbers@gmail.com</p>
+          <p>Business phone: TBD</p>
+        </section>
+      </main>
 
-      <a href="https://www.google.com/search?q=Deez+Plumbing+LTD+reviews" target="_blank" rel="noopener noreferrer">
-        <button>Read More</button>
-      </a>
-
-      <h3>Our Mission</h3>
-      <p>Two apprentice plumbers pursuing their dreams, founding their own company with a vision for excellence in plumbing services and customer satisfaction.</p>
-
-      <Link to="/OurMission">
-        <button>Meet the Crew</button>
-      </Link>
-
-      <h3>Contact Us</h3>
-
-      <p>
-        Email: Deezplumbers@gmail.com<br></br>
-        Phone: TBD
-      </p>
-      
+      <footer className="footer">
+        <p>Deez Plumbing LTD</p>
+        <nav>
+          <a href="#our-mission">Our Mission</a>
+          <a href="#book-appointment">Book an Appointment</a>
+        </nav>
+      </footer>
     </div>
   );
 }
