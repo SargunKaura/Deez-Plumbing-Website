@@ -8,7 +8,7 @@ function Home() {
 
       <header>
         <Link to="/">
-          <button>Home Page</button>
+          <h1>DPL</h1>
         </Link>
         <Link to="/">
           <button>Contact Us</button>
@@ -21,9 +21,9 @@ function Home() {
         </Link>
       </header>
 
-      <h1>Deez Plumbing LTD</h1>
+      <h2>Deez Plumbing LTD</h2>
 
-      <h3>Local Plumbers for Local People.</h3>
+      <h4>Local Plumbers for Local People.</h4>
 
       <p>
         Hours of operation<br />
@@ -36,20 +36,20 @@ function Home() {
         <button>Book Appointment</button>
       </Link>
 
-      <h2>Reviews and Testimonials</h2>
+      <h3>Reviews and Testimonials</h3>
 
       <a href="https://www.google.com/search?q=Deez+Plumbing+LTD+reviews" target="_blank" rel="noopener noreferrer">
         <button>Read More</button>
       </a>
 
-      <h2>Our Mission</h2>
+      <h3>Our Mission</h3>
       <p>Two apprentice plumbers pursuing their dreams, founding their own company with a vision for excellence in plumbing services and customer satisfaction.</p>
 
       <Link to="/OurMission">
         <button>Meet the Crew</button>
       </Link>
 
-      <h2>Contact Us</h2>
+      <h3>Contact Us</h3>
 
       <p>
         Email: Deezplumbers@gmail.com<br></br>
