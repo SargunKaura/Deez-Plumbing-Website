@@ -6,11 +6,65 @@ body { margin: 0;
       color: #333;
 }
 
-.header {display: inline-flex;
+.header {
+        
+        display: flex;
         justify-content: space-between;
-        padding: 1rem;
-        align-items: flex-start;
         background: #DDFFE7;
+}
+
+.DPL-header{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 3rem 1rem 3rem;
+}
+.DPL-header-button{
+
+        padding: 1rem 2rem 1rem 2rem;
+        color: black;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin-left: 0rem;
+        margin-right: 0rem;
+
+        font-family: "IM FELL Great Primer SC";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 60px */
+}
+.Buttons-header {
+
+        display: flex;
+        justify-content: space-between; /* Space between the buttons */
+        
+      }
+  
+.header-button {
+
+        padding: 3rem 4rem 3rem 4rem;
+        color: black;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin-left: 0rem;
+        margin-right: 0rem;
+
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 30px */
+
+        /* border: 1px solid black; */
+}
+.header-button:hover {
+        background-color: #00796b;
+        text-decoration: underline;
+        color: white;
 }
 
 .header h1 {margin: 0;
