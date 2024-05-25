@@ -117,7 +117,6 @@ body { margin: 0;
 .hero {
   
   padding: 2rem;
-  border: 1px solid black;
 }
 
 .hero h2 {
@@ -131,6 +130,7 @@ body { margin: 0;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -1.28px;
+  margin: 2rem 0 0.5rem 0;
 }
 
 .hero p {
@@ -140,17 +140,25 @@ body { margin: 0;
   font-family: Inter;
   font-size: 24px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 350;
   line-height: 150%;
   font-style: italic;
+  margin: 0;
 }
 
 .appointment-button {margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #00796b;
+    padding: 1rem 2rem;
+    background-color: black;
     color: white;
     border: none;
+    border-radius: 0.5rem;
     cursor: pointer;
+    
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
 }
 
 .hours-operation {

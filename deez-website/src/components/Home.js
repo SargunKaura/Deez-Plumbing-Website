@@ -31,7 +31,10 @@ function Home() {
         <section className="hero">
           <h2>Deez Plumbing LTD</h2>
           <p>Local Plumbers for Local People.</p>
+          <Link to="/BookAppointment">
           <button className="appointment-button">Book an Appointment</button>
+          </Link>
+          
         </section>
 
         <section className="hours-operation">
