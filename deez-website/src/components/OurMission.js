@@ -51,6 +51,18 @@ function OurMission() {
       </p>
 
       <a href="https://www.linkedin.com/in/john-doe-1234567890/">Nick's LinkedIn</a>
+
+      <footer className="footer">
+        <div className="DPL-footer">
+          <p>Deez Plumbing LTD</p>
+        </div>
+        <nav>
+        <div className="footer-links">
+          <a href="#our-mission">Our Mission</a>
+          <a href="#book-appointment">Book an Appointment</a>
+        </div>
+      </nav>
+      </footer>
     </div>
   );
 }

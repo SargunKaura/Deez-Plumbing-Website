@@ -31,6 +31,19 @@ function BookAppointment() {
       <p>Fill out the form below to book an appointment with Deez Plumbing LTD. (might be an embeded google form) </p>
   
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSccRrGin1zW39DCzn-aZ239D8fbHqTuR69ZClj5x7ZiRhqkGA/viewform?embedded=true" width="640" height="2000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    
+    <footer className="footer">
+      <div className="DPL-footer">
+        <p>Deez Plumbing LTD</p>
+      </div>
+      <nav>
+        <div className="footer-links">
+          <a href="#our-mission">Our Mission</a>
+          <a href="#book-appointment">Book an Appointment</a>
+        </div>
+      </nav>
+    </footer>
+    
     </div>
   );
 }
