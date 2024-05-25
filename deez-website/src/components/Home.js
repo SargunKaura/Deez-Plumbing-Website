@@ -7,18 +7,24 @@ function Home() {
     <div className="App">
 
     <header className="header">
+
+      <div class = "DPL-header">
         <Link to="/">
-          <h1>DPL</h1>
+          <button class = "DPL-header-button">DPL</button>
         </Link>
+      </div>
+      
+      <div class = "Buttons-header">
         <Link to="/">
-          <button>Contact Us</button>
+          <button class = "header-button">Contact Us</button>
         </Link>
         <Link to="/OurMission">
-          <button>Our Mission</button>
+          <button class = "header-button">Our Mission</button>
         </Link>
         <Link to="/BookAppointment">
-          <button>Book Appointment</button>
+          <button class = "header-button">Book an Appointment</button>
         </Link>
+      </div>
       </header>
 
       <main>
