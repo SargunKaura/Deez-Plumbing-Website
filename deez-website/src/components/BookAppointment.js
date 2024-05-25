@@ -1,24 +1,30 @@
-import './BookAppointment.css';
+import '../App.css';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 function BookAppointment() {
   return (
     <div className="App">
 
-      <header>
-        <Link to="/">
-          <button>Home Page</button>
-        </Link>
-        <Link to="/">
-          <button>Contact Us</button>
-        </Link>
-        <Link to="/OurMission">
-          <button>Our Mission</button>
-        </Link>
-        <Link to="/BookAppointment">
-          <button>Book Appointment</button>
-        </Link>
-      </header>
+    <header className="header">
+
+    <div class = "DPL-header">
+      <Link to="/">
+        <button class = "DPL-header-button">DPL</button>
+      </Link>
+    </div>
+
+    <div class = "Buttons-header">
+      <Link to="/">
+        <button class = "header-button">Contact Us</button>
+      </Link>
+      <Link to="/OurMission">
+        <button class = "header-button">Our Mission</button>
+      </Link>
+      <Link to="/BookAppointment">
+        <button class = "header-button">Book an Appointment</button>
+      </Link>
+    </div>
+    </header>
 
       <h1>Book an Appointment</h1>
 

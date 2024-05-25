@@ -1,4 +1,4 @@
-import './Home.css';
+import '../App.css';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import React from 'react';
 
