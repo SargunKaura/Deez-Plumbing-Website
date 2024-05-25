@@ -36,12 +36,12 @@ body { margin: 0;
         font-weight: 400;
         line-height: 150%; /* 60px */
 }
+
 .Buttons-header {
 
         display: flex;
         justify-content: space-between; /* Space between the buttons */
-        
-      }
+}
   
 .header-button {
 
@@ -75,10 +75,12 @@ body { margin: 0;
               color: #00796b;
 }
 
-.hero {padding: 2rem;
-}
+.hero {padding: 2rem;}
 
-.hero h2 {margin: 0.5rem 0;}
+.hero h2 {
+        margin: 0.5rem 0;
+        font-size: 40px;
+}
 
 .appointment-button {margin-top: 1rem;
         padding: 0.5rem 1rem;
@@ -95,9 +97,13 @@ body { margin: 0;
         background: #DDFFE7;
 }
 
+.hours-content {
+        padding: 1rem 3rem 1rem 3rem;
+}
+
 .mission, .reviews, .contact {
-  padding: 2rem;
-  border-bottom: 1px solid #e0e0e0;
+        padding: 2rem;
+        border-bottom: 1px solid #e0e0e0;
 }
 
 .mission-button {margin-top: 1rem;
@@ -137,14 +143,32 @@ body { margin: 0;
       
 .contact {margin: 0.5rem 0;
         text-align: left;
+        padding: 1rem 5rem 1rem 5rem;
+}
+
+.footer {
+        display: flex;
+        justify-content: space-between; /* Distributes space between DPL-footer and footer-links */
+        align-items: center; /* Vertically centers items */
+        background-color: #e0f7fa; 
+        padding: 1rem; 
+}
+
+.DPL-footer p {
+        font-weight: bold;
+        padding: 1rem 4rem 1rem 4rem;
 }
       
-.footer {padding: 1rem;
-        background-color: #e0f7fa;
+.footer-links {
+        display: flex;
+        gap: 20px; 
+        padding: 1rem 3rem 1rem 3rem;
 }
       
-.footer nav a {margin: 0 1rem;
+.footer-links a {
         text-decoration: none;
-        color: #00796b;
+        color: #008080; 
+        font-size: 16px; 
+        padding: 1rem 1rem 1rem 1rem;
 }
       

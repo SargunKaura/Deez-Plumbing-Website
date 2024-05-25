@@ -35,10 +35,12 @@ function Home() {
         </section>
 
         <section className="hours-operation">
-          <h3>Hours of Operation</h3>
-          <p>Weekdays: 4:00 PM - 11:00 PM</p>
-          <p>Weekends: 5:30 AM - 11:00 PM</p>
-          <p>Holidays: CLOSED</p>
+          <div className="hours-content">
+            <h3>Hours of Operation</h3>
+            <p>Weekdays: 4:00 PM - 11:00 PM</p>
+            <p>Weekends: 5:30 AM - 11:00 PM</p>
+            <p>Holidays: CLOSED</p>
+          </div>
         </section>
 
         <section id="our-mission" className="mission">
@@ -78,10 +80,14 @@ function Home() {
       </main>
 
       <footer className="footer">
-        <p>Deez Plumbing LTD</p>
+        <div className="DPL-footer">
+          <p>Deez Plumbing LTD</p>
+        </div>
         <nav>
-          <a href="#our-mission">Our Mission</a>
-          <a href="#book-appointment">Book an Appointment</a>
+          <div className="footer-links">
+            <a href="#our-mission">Our Mission</a>
+            <a href="#book-appointment">Book an Appointment</a>
+          </div>
         </nav>
       </footer>
     </div>
