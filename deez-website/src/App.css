@@ -114,11 +114,35 @@ body { margin: 0;
           color: #00796b;
 }
 
-.hero {padding: 2rem;}
+.hero {
+  
+  padding: 2rem;
+  border: 1px solid black;
+}
 
 .hero h2 {
-    margin: 0.5rem 0;
-    font-size: 40px;
+  color: #000;
+
+  text-align: center;
+  /* Title */
+  font-family: Inter;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.28px;
+}
+
+.hero p {
+  color: #828282;
+
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  font-style: italic;
 }
 
 .appointment-button {margin-top: 1rem;
