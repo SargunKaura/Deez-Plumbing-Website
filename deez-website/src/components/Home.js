@@ -14,7 +14,7 @@ function Home() {
         </Link>
       </div>
       
-      <div class = "Buttons-header">
+      <div class = "buttons-header">
         <Link to="/">
           <button class = "header-button">Contact Us</button>
         </Link>
@@ -28,7 +28,7 @@ function Home() {
       </header>
 
       <main>
-        <section className="hero">
+        <section className="title">
           <h2>Deez Plumbing LTD</h2>
           <p>Local Plumbers for Local People.</p>
           <Link to="/BookAppointment">
@@ -44,12 +44,23 @@ function Home() {
             <p>Weekends: 5:30 AM - 11:00 PM</p>
             <p>Holidays: CLOSED</p>
           </div>
+          <div className="hours-image">
+
+            <img src="plumber.jpg" alt="Plumber" />
+          </div>
         </section>
 
-        <section id="our-mission" className="mission">
+        <section className="mission">
+
+          <div className = "mission-text">
           <h3>Our Mission</h3>
           <p>Two apprentice plumbers pursuing their dreams, founding their own company with a vision for excellence in plumbing services and customer satisfaction.</p>
-          <button className="mission-button">More Info</button>
+          </div>
+          <div className = "mission-elements">
+          <Link to="/OurMission">
+          <button className="mission-button">Meet the Crew</button>
+          </Link>
+          </div>
         </section>
 
         <section className="reviews">
