@@ -1,24 +1,30 @@
-import './OurMission.css';
+import '../App.css';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 function OurMission() {
   return (
     <div className="App">
 
-      <header>
-        <Link to="/">
-          <button>Home Page</button>
-        </Link>
-        <Link to="/">
-          <button>Contact Us</button>
-        </Link>
-        <Link to="/OurMission">
-          <button>Our Mission</button>
-        </Link>
-        <Link to="/BookAppointment">
-          <button>Book Appointment</button>
-        </Link>
-      </header>
+    <header className="header">
+
+    <div class = "DPL-header">
+      <Link to="/">
+        <button class = "DPL-header-button">DPL</button>
+      </Link>
+    </div>
+
+    <div class = "Buttons-header">
+      <Link to="/">
+        <button class = "header-button">Contact Us</button>
+      </Link>
+      <Link to="/OurMission">
+        <button class = "header-button">Our Mission</button>
+      </Link>
+      <Link to="/BookAppointment">
+        <button class = "header-button">Book an Appointment</button>
+      </Link>
+    </div>
+    </header>
 
       <h1>Our Mission</h1>
 
@@ -45,6 +51,18 @@ function OurMission() {
       </p>
 
       <a href="https://www.linkedin.com/in/john-doe-1234567890/">Nick's LinkedIn</a>
+
+      <footer className="footer">
+        <div className="DPL-footer">
+          <p>Deez Plumbing LTD</p>
+        </div>
+        <nav>
+        <div className="footer-links">
+          <a href="#our-mission">Our Mission</a>
+          <a href="#book-appointment">Book an Appointment</a>
+        </div>
+      </nav>
+      </footer>
     </div>
   );
 }

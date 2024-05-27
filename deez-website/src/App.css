@@ -1,38 +1,300 @@
+body { margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .App {
+  
   text-align: center;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* HEADER CSS */
+
+.header {
+    
+    display: flex;
+    justify-content: space-between;
+    background: #DDFFE7;
+}
+.DPL-header{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 3rem 1rem 3rem;
+}
+.DPL-header-button{
+
+    padding: 1rem 2rem 1rem 2rem;
+    color: black;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 0rem;
+    margin-right: 0rem;
+
+    font-family: "IM FELL Great Primer SC";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 60px */
+}
+.buttons-header {
+
+    display: flex;
+    justify-content: space-between; /* Space between the buttons */
+}
+.header-button {
+
+    padding: 3rem 4rem 3rem 4rem;
+    color: black;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 0rem;
+    margin-right: 0rem;
+
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 30px */
+}
+.header-button:hover {
+    background-color: #00796b;
+    text-decoration: underline;
+    color: white;
+}
+.header h1 {margin: 0;
+}
+.header nav a {margin: 0 1rem;
+          text-decoration: none;
+          color: #00796b;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* TITLE CSS */
+
+.title {
+  
+  padding: 2rem;
+}
+.title h2 {
+  color: #000;
+
+  text-align: center;
+  /* Title */
+  font-family: Inter;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.28px;
+  margin: 2rem 0 1rem 0;
+}
+.title p {
+  color: #828282;
+
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: 150%;
+  font-style: italic;
+  margin: 0.5rem 0 0.5rem 0;
+}
+.appointment-button {margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* HOURS OF OPPERATION CSS */
+
+.hours-operation {
+    padding: 2rem;
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+    background: #DDFFE7;
+}
+.hours-content {
+    margin-left: 3rem;
+}
+.hours-image{
+    margin-left: 10rem;
+    width: 50%;
+    height: 100%;
+    border: 1px solid black;
+}
+.hours-operation h3{
+
+    margin: 0 0 1rem 0;
+    color: #000;
+
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+}
+.hours-operation p {
+    
+    margin: 0;
+
+    color: #828282;
+
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+.hours-content {
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+/* OUR MISSION CSS */
+
+.mission {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 2rem;
+  text-align: left;
+  justify-content: center; /* Centers the children horizontally */
+  align-items: center; /* Centers the children vertically */
+}
+
+.mission-text {
+  margin-left: 3rem;
+  padding: 1rem 3rem;
+  flex: 1;
+}
+
+.mission-elements {
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 20%;
+  height: 100%;
+}
+.mission h3{
+
+    margin: 0 0 1rem 0;
+
+    color: #000;
+    /* Heading */
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%; /* 44px */
+    text-align: left;
+}
+.mission p{
+
+    margin: 0;
+
+    color: #828282;
+    /* Body */
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    text-align: left;
+}
+.mission-button{
+
+    padding: 1rem 2rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
 }
 
-.App-link {
-  color: #61dafb;
+
+
+/* REVIEWS AND TESTIMONIALS CSS */
+
+
+
+
+
+
+.reviews, .contact {
+    padding: 2rem;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.reviews .review-images {display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
+
+.reviews .testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.reviews .testimonial {
+    border: 1px solid #e0e0e0;
+    padding: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-button {margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+  
+.contact {margin: 0.5rem 0;
+    text-align: left;
+    padding: 1rem 5rem 1rem 5rem;
+}
+
+/* FOOTER CSS */
+
+.footer {
+    display: flex;
+    justify-content: space-between; /* Distributes space between DPL-footer and footer-links */
+    align-items: center; /* Vertically centers items */
+    background-color: #e0f7fa; 
+    padding: 1rem; 
+}
+.DPL-footer p {
+    font-weight: bold;
+    padding: 1rem 4rem 1rem 4rem;
+}
+.footer-links {
+    display: flex;
+    gap: 20px; 
+    padding: 1rem 3rem 1rem 3rem;
+}
+.footer-links a {
+    text-decoration: none;
+    color: #008080; 
+    font-size: 16px; 
+    padding: 1rem 1rem 1rem 1rem;
+}
+  
