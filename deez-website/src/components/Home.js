@@ -14,7 +14,7 @@ function Home() {
         </Link>
       </div>
       
-      <div class = "buttons-header">
+      <div class = "buttons-header-DIV">
         <Link to="/">
           <button class = "header-button">Contact Us</button>
         </Link>

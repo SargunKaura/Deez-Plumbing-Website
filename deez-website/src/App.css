@@ -32,27 +32,26 @@ body { margin: 0;
     cursor: pointer;
     margin-left: 0rem;
     margin-right: 0rem;
-
     font-family: "IM FELL Great Primer SC";
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 60px */
 }
-.buttons-header {
+.buttons-header-DIV {
 
     display: flex;
     justify-content: space-between; /* Space between the buttons */
+    margin: 0;
 }
 .header-button {
 
-    padding: 3rem 4rem 3rem 4rem;
+    padding: 4rem;
     color: black;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    margin-left: 0rem;
-    margin-right: 0rem;
+    margin: 0px;
 
     font-family: Inter;
     font-size: 15px;
