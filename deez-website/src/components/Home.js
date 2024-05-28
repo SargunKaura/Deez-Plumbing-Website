@@ -64,29 +64,42 @@ function Home() {
         </section>
 
         <section className="reviews">
+
+          <div className="reviews-text">
           <h3>Reviews and Testimonials</h3>
+          <p>Our work and reviews.</p>
+          </div>
+
           <div className="review-images">
             <img src="before.jpg" alt="Before" />
             <img src="after.jpg" alt="After" />
           </div>
+
           <div className="testimonials">
+
             <div className="testimonial">
               <p>"A heroic piece of praise!"</p>
               <p>- Name</p>
             </div>
+
             <div className="testimonial">
               <p>"A fantastic bit of feedback!"</p>
               <p>- Name</p>
             </div>
+
             <div className="testimonial">
               <p>"A genuinely glowing review!"</p>
               <p>- Name</p>
             </div>
           </div>
+
+          <div className = "review-button-Div">
           <button className="review-button">Read more Reviews</button>
+          </div>
+
         </section>
 
-        <section id="contact-us" className="contact">
+        <section className="contact">
           <h3>Contact Us</h3>
           <p>Email: Deezplumbers@gmail.com</p>
           <p>Business phone: TBD</p>
