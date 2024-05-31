@@ -1,11 +1,12 @@
-body { margin: 0;
-  font-family: Arial, sans-serif;
+body { 
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 .App {
   
-  text-align: center;
-  color: #333;
+    text-align: center;
+    color: #333;
 }
 
 /* HEADER CSS */
@@ -15,6 +16,7 @@ body { margin: 0;
     display: flex;
     justify-content: space-between;
     background: #DDFFE7;
+    
 }
 .DPL-header{
 
@@ -22,6 +24,7 @@ body { margin: 0;
     justify-content: center;
     align-items: center;
     padding: 1rem 3rem 1rem 3rem;
+    
 }
 .DPL-header-button{
 
@@ -41,7 +44,7 @@ body { margin: 0;
 .buttons-header-DIV {
 
     display: flex;
-    justify-content: space-between; /* Space between the buttons */
+    justify-content: space-evenly;
     margin: 0;
 }
 .header-button {
@@ -58,6 +61,7 @@ body { margin: 0;
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 30px */
+
 }
 .header-button:hover {
     background-color: #00796b;
@@ -71,6 +75,63 @@ body { margin: 0;
           color: #00796b;
 }
 
+
+/*BUTTONS CSS*/
+
+
+.main-button {
+    
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+
+    transition: transform 0.3s ease;
+}
+
+.main-button:hover {
+
+    transform: translate(0px, -3px);
+    background-color:  #00796b;
+}
+
+/* H3 and P CSS */
+
+h3{
+    margin: 0 0 1rem 0;
+
+    color: #000;
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    text-align: left;
+}
+
+p {
+    
+    margin: 0;
+
+    color: #828282;
+
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+
+    text-align: left;
+}
 /* TITLE CSS */
 
 .title {
@@ -81,7 +142,7 @@ body { margin: 0;
   color: #000;
 
   text-align: center;
-  /* Title */
+  
   font-family: Inter;
   font-size: 64px;
   font-style: normal;
@@ -102,27 +163,13 @@ body { margin: 0;
   font-style: italic;
   margin: 0.5rem 0 0.5rem 0;
 }
-.appointment-button {margin-top: 1rem;
-    padding: 1rem 2rem;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    
-    font-family: Inter;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%; /* 24px */
-}
+
 
 /* HOURS OF OPPERATION CSS */
 
 .hours-operation {
     padding: 2rem;
     display: flex;
-    border-bottom: 1px solid #e0e0e0;
     text-align: left;
     background: #DDFFE7;
 }
@@ -134,29 +181,6 @@ body { margin: 0;
     width: 50%;
     height: 100%;
     border: 1px solid black;
-}
-.hours-operation h3{
-
-    margin: 0 0 1rem 0;
-    color: #000;
-
-    font-family: Inter;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 110%;
-}
-.hours-operation p {
-    
-    margin: 0;
-
-    color: #828282;
-
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
 }
 .hours-content {
     padding: 1rem 3rem 1rem 3rem;
@@ -172,61 +196,17 @@ body { margin: 0;
   align-items: center; /* Centers the children vertically */
 
 }
-
 .mission-text {
   margin-left: 3rem;
   padding: 1rem 3rem;
   flex: 1;
 }
-
 .mission-elements {
   text-align: center;
   justify-content: center;
   width: 20%;
   height: 100%;
 }
-.mission h3{
-
-    margin: 0 0 1rem 0;
-
-    color: #000;
-    /* Heading */
-    font-family: Inter;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 110%; /* 44px */
-    text-align: left;
-}
-.mission p{
-
-    margin: 0;
-
-    color: #828282;
-    /* Body */
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 24px */
-    text-align: left;
-}
-.mission-button{
-
-    padding: 1rem 2rem;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-
-    font-family: Inter;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%; /* 24px */
-}
-
 
 
 /* REVIEWS AND TESTIMONIALS CSS */
@@ -241,7 +221,6 @@ body { margin: 0;
 .reviews > div {
     margin-bottom: 1rem; /* Adjust the spacing between each child */
 }
-
 .reviews-text{
 
     text-align: left;
@@ -256,81 +235,34 @@ body { margin: 0;
     font-weight: 600;
     line-height: 110%; /* 44px */
     text-align: left;
-
 }
-.reviews-text h3{
-
-    margin: 0 0 1rem 0;
-
-    color: #000;
-    /* Heading */
-    font-family: Inter;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 110%; /* 44px */
-    text-align: left;
-}
-.reviews-text p{
-
-    margin: 0;
-
-    color: #828282;
-    /* Body */
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 24px */
-    text-align: left;
-}
-.review-images {display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
 .testimonials {
     display: flex;
     justify-content: center;
     gap: 2rem;
 }
-
 .testimonial {
     border: 1px transparent;
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 3rem 8rem 3rem 8rem;
     background-color: #ffffff;
     box-shadow: -5px 7px 15px 2px rgba(0, 0, 0, 0.1);
 
     color: #000;
 
-    /* Body text */
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 30px */
+    line-height: 150%;
 }
-.review-button {
-    
-    margin-top: 2rem;
-    padding: 1rem 2rem;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
+.testimonial p{
 
-    font-family: Inter;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%; /* 24px */
-
+    color: black;
 }
-
 
 /* CAROUSEL CSS */
+
 
 .carousel-div {
     display: flex;
@@ -394,32 +326,6 @@ body { margin: 0;
 
     padding: 1rem 5rem 3rem;
     margin-left: 3rem;
-}
-.contact h3{
-
-    margin: 0 0 1rem 0;
-
-    color: #000;
-    /* Heading */
-    font-family: Inter;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 110%; /* 44px */
-    text-align: left;
-}
-.contact p{
-
-    margin: 0;
-
-    color: #828282;
-    /* Body */
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 24px */
-    text-align: left;
 }
 
 
