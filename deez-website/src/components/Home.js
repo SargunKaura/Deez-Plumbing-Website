@@ -1,6 +1,6 @@
-import '../App.css';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import React from 'react';
+import '../App.css'; // Adjust the path to where App.css is located
 
 function Home() {
   const scrollToContact = () => {
@@ -8,6 +8,58 @@ function Home() {
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const images = [
+    '/images/default-image.jpg', // Use the path relative to the public directory
+    '/images/default-image.jpg',
+    '/images/default-image.jpg',
+    '/images/default-image.jpg', // Add more images as needed
+  ];
+
+  const Carousel = ({ images }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [transition, setTransition] = useState(true);
+    const totalSlides = Math.ceil(images.length / 2);
+
+    const handleTransition = (newIndex) => {
+      setTransition(true);
+      setTimeout(() => {
+        setCurrentIndex(newIndex);
+      }, 500); // Match the duration with the CSS transition duration
+    };
+
+    const nextSlide = () => {
+      handleTransition((currentIndex + 1) % totalSlides);
+    };
+
+    const prevSlide = () => {
+      handleTransition(currentIndex === 0 ? totalSlides - 1 : currentIndex - 1);
+    };
+
+    return (
+      <div className="carousel-div">
+        <button className="carousel-button" onClick={prevSlide}>
+          &#x2190;  {/* Left arrow */}
+        </button>
+        <div className="carousel">
+        
+          <div className="carousel-slide"
+            style={{
+              transform: `translateX(-${currentIndex * 100}%)`,
+              transition: transition ? 'transform 0.3s ease-in-out' : 'none'
+            }}
+          >
+            {images.map((image, index) => (
+              <img key={index} src={image} alt={`Slide ${index}`} />
+            ))}
+          </div>
+        </div>
+        <button className="carousel-button" onClick={nextSlide}>
+          &#x2192;  {/* Right arrow */}
+        </button>
+      </div>
+    );
   };
 
   return (
@@ -18,9 +70,11 @@ function Home() {
             <button className="DPL-header-button">DPL</button>
           </Link>
         </div>
-        
+
         <div className="buttons-header-DIV">
-          <button className="header-button" onClick={scrollToContact}>Contact Us</button>
+          <button className="header-button" onClick={scrollToContact}>
+            Contact Us
+          </button>
           <Link to="/OurMission">
             <button className="header-button">Our Mission</button>
           </Link>
@@ -54,7 +108,11 @@ function Home() {
         <section className="mission">
           <div className="mission-text">
             <h3>Our Mission</h3>
-            <p>Two apprentice plumbers pursuing their dreams, founding their own company with a vision for excellence in plumbing services and customer satisfaction.</p>
+            <p>
+              Two apprentice plumbers pursuing their dreams, founding their own
+              company with a vision for excellence in plumbing services and
+              customer satisfaction.
+            </p>
           </div>
           <div className="mission-elements">
             <Link to="/OurMission">
@@ -68,10 +126,7 @@ function Home() {
             <h3>Reviews and Testimonials</h3>
             <p>Our work and reviews.</p>
           </div>
-          <div className="review-images">
-            <img src="before.jpg" alt="Before" />
-            <img src="after.jpg" alt="After" />
-          </div>
+          <Carousel images={images} />
           <div className="testimonials">
             <div className="testimonial">
               <p>"A heroic piece of praise!"</p>
