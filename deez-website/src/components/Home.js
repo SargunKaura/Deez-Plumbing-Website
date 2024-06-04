@@ -21,6 +21,13 @@ function Home() {
         '/images/default-image.jpg',
     ];
 
+    const hoursImages = [
+        '/images/hours-image1.jpg', // test images for hours of operation carousel
+        '/images/hours-image2.jpg',
+        '/images/hours-image3.jpg',
+        '/images/hours-image4.jpg',
+    ];
+
     const Carousel = ({ images }) => {
 
         const [currentIndex, setCurrentIndex] = useState(0);
@@ -126,11 +133,8 @@ function Home() {
                         <p>Holidays: CLOSED</p>
 
                     </div>
-                    <div className="hours-image">
-
-                        <img src="plumber.jpg" alt="Plumber" />
-
-                    </div>
+                    
+                    <Carousel images={hoursImages} />
 
                 </section>
 
@@ -150,6 +154,7 @@ function Home() {
                         <Link to="/OurMission">
 
                             <button className = "main-button" id ="mission-button">Meet the Crew</button>
+                            
                         </Link>
 
                     </div>
