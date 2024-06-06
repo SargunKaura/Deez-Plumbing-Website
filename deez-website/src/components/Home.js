@@ -22,10 +22,10 @@ function Home() {
     ];
 
     const hoursImages = [
-        '/images/hours-image1.jpg', // test images for hours of operation carousel
-        '/images/hours-image2.jpg',
-        '/images/hours-image3.jpg',
-        '/images/hours-image4.jpg',
+        '/images/default-image.jpg', // test images for hours of operation carousel
+        '/images/default-image.jpg',
+        '/images/default-image.jpg',
+        '/images/default-image.jpg',
     ];
 
     const Carousel = ({ images }) => {
