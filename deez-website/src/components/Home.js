@@ -22,17 +22,17 @@ function Home() {
     ];
 
     const hoursImages = [
-        '/images/default-image.jpg', // test images for hours of operation carousel
-        '/images/default-image.jpg',
-        '/images/default-image.jpg',
-        '/images/default-image.jpg',
+        '/images/default-image2.jpg', // test images for hours of operation carousel
+        '/images/default-image2.jpg',
+        '/images/default-image2.jpg',
+        '/images/default-image2.jpg',
     ];
 
-    const Carousel = ({ images }) => {
+    const Carousel = ({ images, singleSlide = false }) => {
 
         const [currentIndex, setCurrentIndex] = useState(0);
         const [transition, setTransition] = useState(true);
-        const totalSlides = Math.ceil(images.length / 2);
+        const totalSlides = singleSlide ? images.length : Math.ceil(images.length / 2);
 
         const handleTransition = (newIndex) => {
 
@@ -63,7 +63,10 @@ function Home() {
 
                 <div className="carousel">
 
-                    <div className="carousel-slide" style={{ transform: `translateX(-${currentIndex * 100}%)`, transition: transition ? 'transform 0.3s ease-in-out' : 'none'}}>
+                    <div className="carousel-slide" 
+                    style={{ transform: `translateX(-${currentIndex * 100}%)`, 
+                    transition: transition ? 'transform 0.3s ease-in-out' : 'none', width: `100%`
+                    }}>
 
                         {images.map((image, index) => (
                             <img key={index} src={image} alt={`Slide ${index}`} />
@@ -133,9 +136,9 @@ function Home() {
                         <p>Holidays: CLOSED</p>
 
                     </div>
-                    
-                    <Carousel images={hoursImages} />
-
+                    <div className="hours-image">
+                        <Carousel images={hoursImages} singleSlide={true} />
+                    </div>
                 </section>
 
                 <section className="mission">
