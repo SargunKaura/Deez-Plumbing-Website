@@ -7,13 +7,11 @@ import BookAppointment from './components/BookAppointment.js';
 function App() {
   return (
     <Router>
-      <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/OurMission" element={<OurMission />} />
           <Route path="/BookAppointment" element={<BookAppointment />} />
         </Routes>
-      </div>
     </Router>
   );
 }
