@@ -30,6 +30,7 @@ function Home() {
     ];
 
     const hoursImages = [
+
         '/images/hours-image1.jpg', // test images for hours of operation carousel
         '/images/hours-image2.jpg',
         '/images/hours-image3.jpg',
@@ -84,7 +85,10 @@ function Home() {
 
                 <div className="carousel">
 
-                    <div className="carousel-slide" style={{ transform: `translateX(-${currentIndex * 100}%)`, transition: transition ? 'transform 0.3s ease-in-out' : 'none'}}>
+                    <div className="carousel-slide" 
+                    style={{ transform: `translateX(-${currentIndex * 100}%)`, 
+                    transition: transition ? 'transform 0.3s ease-in-out' : 'none', width: `100%`
+                    }}>
 
                         {images.map((image, index) => (
                             <img key={index} src={image} alt={`Slide ${index}`} />
