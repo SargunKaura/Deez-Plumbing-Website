@@ -1,7 +1,12 @@
 import '../App.css';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { AppContext } from '../AppContext.js';
 
 function OurMission() {
+
+  const { setcontactUsButtonClicked } = useContext(AppContext);
+
   return (
     <div className="App">
 
@@ -22,7 +27,7 @@ function OurMission() {
           </Link>
 
           <Link to="/">
-            <button className="header-button"> Contact Us</button>
+            <button className="header-button" onClick={() => setTimeout(() => setcontactUsButtonClicked(true), 500)}>Contact Us</button>
           </Link>
 
           <Link to="/OurMission">

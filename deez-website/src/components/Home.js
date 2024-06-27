@@ -1,8 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import '../App.css';
+import React, { useState, useEffect, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { AppContext } from '../AppContext.js';
 
 function Home() {
+
+    const { contactUsButtonClicked , setcontactUsButtonClicked } = useContext(AppContext);
+
     const scrollToContact = () => {// function for making the contact us button scroll to the contact section
 
         const contactSection = document.getElementById('contact-section');
@@ -13,6 +17,10 @@ function Home() {
         }
     };
 
+    if(contactUsButtonClicked) {
+        scrollToContact();
+        setcontactUsButtonClicked(false);
+    }
     const images = [
 
         '/images/before-image-one.jpg', //images for befoe and after carousel
@@ -113,7 +121,7 @@ function Home() {
                         <button className="header-button">Book an Appointment</button>
                     </Link>
 
-                    <button className="header-button" onClick={scrollToContact}> Contact Us</button>
+                    <button className="header-button" onClick={() => setcontactUsButtonClicked(true)}>Contact Us</button>
 
                     <Link to="/OurMission">
                         <button className="header-button">Our Mission</button>
