@@ -35,7 +35,7 @@ body {
     cursor: pointer;
     margin-left: 0rem;
     margin-right: 0rem;
-    font-family: "IM FELL Great Primer SC";
+    font-family: IM FELL Great Primer SC;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
@@ -306,10 +306,10 @@ p {
     align-items: center;
     justify-content: center;
     position: relative;
-    width: auto;
-    height: auto;
     max-width: 1300px;
     max-height: 500px;
+    width: auto;
+    height: auto;
     margin: auto;
   }
 .carousel {

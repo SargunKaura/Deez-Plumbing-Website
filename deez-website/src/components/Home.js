@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import '../App.css';
+import React, { useState, useEffect, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { AppContext } from '../AppContext.js';
 
 function Home() {
+
+    const { contactUsButtonClicked , setcontactUsButtonClicked } = useContext(AppContext);
+
     const scrollToContact = () => {// function for making the contact us button scroll to the contact section
 
         const contactSection = document.getElementById('contact-section');
@@ -13,26 +17,32 @@ function Home() {
         }
     };
 
+    if(contactUsButtonClicked) {
+        scrollToContact();
+        setcontactUsButtonClicked(false);
+    }
     const images = [
 
-        '/images/default-image.jpg', //test images for now
-        '/images/default-image.jpg',
+        '/images/before-image-one.jpg', //images for befoe and after carousel
+        '/images/after-image-one.jpg',
         '/images/default-image.jpg',
         '/images/default-image.jpg',
     ];
 
     const hoursImages = [
-        '/images/default-image2.jpg', // test images for hours of operation carousel
-        '/images/default-image2.jpg',
-        '/images/default-image2.jpg',
-        '/images/default-image2.jpg',
+
+        '/images/hours-image1.jpg', // test images for hours of operation carousel
+        '/images/hours-image2.jpg',
+        '/images/hours-image3.jpg',
+        '/images/hours-image4.jpg',
     ];
 
-    const Carousel = ({ images, singleSlide = false }) => {
+    const Carousel = ({ images }) => {
 
         const [currentIndex, setCurrentIndex] = useState(0);
         const [transition, setTransition] = useState(true);
-        const totalSlides = singleSlide ? images.length : Math.ceil(images.length / 2);
+        const [isManual, setIsManual] = useState(false); // Track user interaction
+        const totalSlides = Math.ceil(images.length / 2);
 
         const handleTransition = (newIndex) => {
 
@@ -45,14 +55,26 @@ function Home() {
 
         const nextSlide = () => {
 
+            setIsManual(true); // User interaction detected
             handleTransition((currentIndex + 1) % totalSlides);
         };
 
         const prevSlide = () => {
 
+            setIsManual(true); // User interaction detected
             handleTransition(currentIndex === 0 ? totalSlides - 1 : currentIndex - 1);
         };
 
+        // function that automaticaly animates the carosel, will stop animating once the user interacts with the carousel
+        useEffect(() => {
+            if (!isManual) {
+                const interval = setInterval(() => {
+                    handleTransition((currentIndex + 1) % totalSlides);
+                }, 3000); // Change slide every 3 seconds
+    
+                return () => clearInterval(interval); // Cleanup interval on component unmount
+            }
+        }, [currentIndex, isManual]);
         return (
 
             <div className="carousel-div">
@@ -103,7 +125,7 @@ function Home() {
                         <button className="header-button">Book an Appointment</button>
                     </Link>
 
-                    <button className="header-button" onClick={scrollToContact}> Contact Us</button>
+                    <button className="header-button" onClick={() => setcontactUsButtonClicked(true)}>Contact Us</button>
 
                     <Link to="/OurMission">
                         <button className="header-button">Our Mission</button>
@@ -136,9 +158,9 @@ function Home() {
                         <p>Holidays: CLOSED</p>
 
                     </div>
-                    <div className="hours-image">
-                        <Carousel images={hoursImages} singleSlide={true} />
-                    </div>
+                    
+                    <Carousel images={hoursImages} />
+
                 </section>
 
                 <section className="mission">
