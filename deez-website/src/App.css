@@ -269,10 +269,10 @@ p {
     align-items: center;
     justify-content: center;
     position: relative;
-    width: auto;
-    height: auto;
     max-width: 1300px;
     max-height: 500px;
+    width: auto;
+    height: auto;
     margin: auto;
   }
 .carousel {

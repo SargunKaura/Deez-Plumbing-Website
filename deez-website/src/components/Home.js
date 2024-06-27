@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
@@ -15,8 +15,8 @@ function Home() {
 
     const images = [
 
-        '/images/default-image.jpg', //test images for now
-        '/images/default-image.jpg',
+        '/images/before-image-one.jpg', //images for befoe and after carousel
+        '/images/after-image-one.jpg',
         '/images/default-image.jpg',
         '/images/default-image.jpg',
     ];
@@ -32,6 +32,7 @@ function Home() {
 
         const [currentIndex, setCurrentIndex] = useState(0);
         const [transition, setTransition] = useState(true);
+        const [isManual, setIsManual] = useState(false); // Track user interaction
         const totalSlides = Math.ceil(images.length / 2);
 
         const handleTransition = (newIndex) => {
@@ -45,14 +46,26 @@ function Home() {
 
         const nextSlide = () => {
 
+            setIsManual(true); // User interaction detected
             handleTransition((currentIndex + 1) % totalSlides);
         };
 
         const prevSlide = () => {
 
+            setIsManual(true); // User interaction detected
             handleTransition(currentIndex === 0 ? totalSlides - 1 : currentIndex - 1);
         };
 
+        // function that automaticaly animates the carosel, will stop animating once the user interacts with the carousel
+        useEffect(() => {
+            if (!isManual) {
+                const interval = setInterval(() => {
+                    handleTransition((currentIndex + 1) % totalSlides);
+                }, 3000); // Change slide every 3 seconds
+    
+                return () => clearInterval(interval); // Cleanup interval on component unmount
+            }
+        }, [currentIndex, isManual]);
         return (
 
             <div className="carousel-div">
