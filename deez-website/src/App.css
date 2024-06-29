@@ -339,7 +339,7 @@ h1 {
     align-items: center;
     justify-content: center;
     position: relative;
-    max-width: 1300px;
+    max-width: 1288px;
     max-height: 500px;
     width: auto;
     height: auto;
@@ -442,4 +442,3 @@ h1 {
     color: #00796b;
     text-decoration: underline;
 }
-  

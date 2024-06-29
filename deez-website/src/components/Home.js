@@ -23,10 +23,16 @@ function Home() {
     }
     const images = [
 
-        '/images/before-image-one.jpg', //images for befoe and after carousel
+        '/images/before-image-one.jpg', //images for before and after carousel
         '/images/after-image-one.jpg',
         '/images/default-image.jpg',
         '/images/default-image.jpg',
+        '/images/default-image.jpg',
+        '/images/default-image.jpg',
+        '/images/default-image.jpg',
+        '/images/default-image.jpg',
+        '/images/default-image.jpg',
+        '/images/default-image.jpg'
     ];
 
     const hoursImages = [
