@@ -36,8 +36,13 @@ function OurMission() {
             <div className="member-info">
                 <h3 className='name'>John D'souza</h3>
                 <p className="role">Owner & Executive Head of Operations</p>
-                <p>Meet John, a trusted plumber from Richmond. With three years of experience and a friendly demeanor, he's your go-to for all your plumbing services in your area. From fixing leaks to installing new fixtures, unclogging drains, John ensures the job is done efficiently and with a smile.</p>
-                <p>Graduated foundations in 2021 Summer, finished level 2 apprenticeship in 2022 Winter, booked for Level 3 apprenticeship in autumn 2024. John specializes in new construction, specifically, mechanical rooms, manages a crew at his own job sites, and finishes tasks in a timely manner.</p>
+                <p>Meet John, a trusted plumber from Richmond. With three years of experience and a friendly
+                   demeanor, he's your go-to for all your plumbing services in your area. From fixing leaks to 
+                   installing new fixtures, unclogging drains, John ensures the job is done efficiently and with 
+                   a smile.</p>
+                <p>Graduated foundations in 2021 Summer, finished level 2 apprenticeship in 2022 Winter, booked 
+                  for Level 3 apprenticeship in autumn 2024. John specializes in new construction, specifically, 
+                  mechanical rooms, manages a crew at his own job sites, and finishes tasks in a timely manner.</p>
                 <div className="linkedin">
                   <a href="john-linkedin-url">John's LinkedIn</a>
                   <div className="linkedin-icon">
@@ -56,7 +61,10 @@ function OurMission() {
             <div className="member-info">
                 <h3 className='name'>Nicholas To</h3>
                 <p className="role">Owner</p>
-                <p>Introducing Nick, another plumber hailing from Richmond. With three years of experience and a warm personality, he's a trusted choice for your plumbing needs. From unclogging drains to renovations, Nick ensures top-quality service. Graduated in 2021 and advancing to level 3 apprenticeship in 2024, he specializes in new construction and tenant improvements.</p>
+                <p>Introducing Nick, another plumber hailing from Richmond. With three years of experience 
+                  and a warm personality, he's a trusted choice for your plumbing needs. From unclogging drains 
+                  to renovations, Nick ensures top-quality service. Graduated in 2021 and advancing to level 3 
+                  apprenticeship in 2024, he specializes in new construction and tenant improvements.</p>
                 <div className="linkedin">
                   <a href="nick-linkedin-url">Nick's LinkedIn</a>
                   <div className="linkedin-icon">

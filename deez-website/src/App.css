@@ -199,7 +199,7 @@ h1 {
 
 .mission-title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 64px;
   margin-bottom: 60px;
   color: #000;
   font-family: 'Inter', sans-serif;
@@ -208,7 +208,7 @@ h1 {
 }
 
 .mission-page {
-  padding: 20px;
+  padding: 20px 150px 100px 150px;
 }
 
 .crew-member {
@@ -248,7 +248,7 @@ h1 {
 }
 
 .member-info h3 {
-  font-size: 1.5em;
+  font-size: 38px;
   margin-bottom: 10px;
 }
 
@@ -258,7 +258,7 @@ h1 {
 }
 
 .member-info p {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .member-info a {
