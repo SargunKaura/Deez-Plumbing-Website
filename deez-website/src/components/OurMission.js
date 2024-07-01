@@ -36,11 +36,11 @@ function OurMission() {
             <div className="member-info">
                 <h3 className='name'>John D'souza</h3>
                 <p className="role">Owner & Executive Head of Operations</p>
-                <p>Meet John, a trusted plumber from Richmond. With three years of experience and a friendly
+                <p className='role1'>Meet John, a trusted plumber from Richmond. With three years of experience and a friendly
                    demeanor, he's your go-to for all your plumbing services in your area. From fixing leaks to 
                    installing new fixtures, unclogging drains, John ensures the job is done efficiently and with 
                    a smile.</p>
-                <p>Graduated foundations in 2021 Summer, finished level 2 apprenticeship in 2022 Winter, booked 
+                <p className='role1'>Graduated foundations in 2021 Summer, finished level 2 apprenticeship in 2022 Winter, booked 
                   for Level 3 apprenticeship in autumn 2024. John specializes in new construction, specifically, 
                   mechanical rooms, manages a crew at his own job sites, and finishes tasks in a timely manner.</p>
                 <div className="linkedin">
@@ -56,19 +56,22 @@ function OurMission() {
 
         <div className="crew-member">
             <div className="member-image">
-                <img src="https://www.w3schools.com/images/picture.jpg" alt="Nicholas - Owner" />
+                <img src='/images/nickspicture.jpg' alt="Nicholas - Owner" />
             </div>
             <div className="member-info">
                 <h3 className='name'>Nicholas To</h3>
                 <p className="role">Owner</p>
-                <p>Introducing Nick, another plumber hailing from Richmond. With three years of experience 
-                  and a warm personality, he's a trusted choice for your plumbing needs. From unclogging drains 
-                  to renovations, Nick ensures top-quality service. Graduated in 2021 and advancing to level 3 
-                  apprenticeship in 2024, he specializes in new construction and tenant improvements.</p>
+                <p className='role1'>Nick is both a hardworking and honest individual and also the owner of his company 
+                  Deez Plumbers. His dedication to his work, whatever it may be, combined with his integrity, 
+                  shines through in both his personal and professional life. Additionally, as the manager of 
+                  his family-owned restaurant, Nick showcases his immense care for customers, ensuring they 
+                  have a positive and enjoyable dining experience. He's driven, having worked part-time jobs 
+                  during high school and transitioning to full-time construction work after graduation, 
+                  displaying a solid work ethic and adaptability.</p>
                 <div className="linkedin">
-                  <a href="nick-linkedin-url">Nick's LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/nick-to-24aba125a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Nick's LinkedIn</a>
                   <div className="linkedin-icon">
-                      <a href="nick-linkedin-url">
+                      <a href="https://www.linkedin.com/in/nick-to-24aba125a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
                           <img src="/images/LinkedIn_icon.png" alt="LinkedIn" />
                       </a>
                   </div>
