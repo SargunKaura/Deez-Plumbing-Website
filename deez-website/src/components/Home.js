@@ -23,16 +23,12 @@ function Home() {
     }
     const images = [
 
-        '/images/before-image-one.jpg', //images for before and after carousel
-        '/images/after-image-one.jpg',
-        '/images/default-image.jpg',
-        '/images/default-image.jpg',
-        '/images/default-image.jpg',
-        '/images/default-image.jpg',
-        '/images/default-image.jpg',
-        '/images/default-image.jpg',
-        '/images/default-image.jpg',
-        '/images/default-image.jpg'
+        '/images/before-after/before-image-one.jpg', //images for before and after carousel
+        '/images/before-after/after-image-one.jpg',
+        '/images/before-after/before-image-two.jpg',
+        '/images/before-after/after-image-two.jpg',
+        '/images/before-after/before-image-three.jpg',
+        '/images/before-after/after-image-three.jpg'
     ];
 
     const hoursImages = [
