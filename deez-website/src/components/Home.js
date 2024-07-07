@@ -21,6 +21,7 @@ function Home() {
         scrollToContact();
         setcontactUsButtonClicked(false);
     }
+
     const images = [
 
         '/images/before-after/before-image-one.jpg', //images for before and after carousel
@@ -33,13 +34,14 @@ function Home() {
 
     const hoursImages = [
 
-        '/images/hours-image1.jpg', // test images for hours of operation carousel
+        '/images/hours-image1.jpg', // images for hours of operation carousel
         '/images/hours-image2.jpg',
         '/images/hours-image3.jpg',
         '/images/hours-image4.jpg',
+        '/images/hours-image5.jpg',
     ];
 
-    const Carousel = ({ images }) => {
+    const Carousel = ({ images, className }) => {
 
         const [currentIndex, setCurrentIndex] = useState(0);
         const [transition, setTransition] = useState(true);
@@ -67,7 +69,7 @@ function Home() {
             handleTransition(currentIndex === 0 ? totalSlides - 1 : currentIndex - 1);
         };
 
-        // function that automaticaly animates the carosel, will stop animating once the user interacts with the carousel
+        // function that automaticaly animates the carousel, will stop animating once the user interacts with the carousel
         useEffect(() => {
             if (!isManual) {
                 const interval = setInterval(() => {
@@ -79,7 +81,7 @@ function Home() {
         }, [currentIndex, isManual]);
         return (
 
-            <div className="carousel-div">
+            <div className={`carousel-div ${className}`}>
 
                 <button className="carousel-button" onClick={prevSlide}>
                 &#x2190; {/* Left arrow character code */}
@@ -107,6 +109,8 @@ function Home() {
             </div>
         );
     };
+
+    <Carousel images={hoursImages} className="hours-carousel" />
 
     return (
 
