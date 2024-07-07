@@ -178,12 +178,7 @@ h1 {
 .hours-content {
     margin-left: 3rem;
 }
-.hours-image{
-    margin-left: 10rem;
-    width: 50%;
-    height: 100%;
-    border: 1px solid black;
-}
+
 .hours-content {
     padding: 1rem 3rem 1rem 3rem;
 }
@@ -457,4 +452,45 @@ h1 {
 .footer-links a:hover {
     color: #00796b;
     text-decoration: underline;
+}
+
+.hours-carousel img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+.carousel-div.hours-carousel {
+  max-width: 1000px; /* Optional: Set a max width for the carousel to avoid too large images */
+  margin: 0 auto; /* Center the carousel if max-width is set */
+
+}
+
+.carousel-div.hours-carousel .carousel {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-div.hours-carousel .carousel-slide {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.carousel-div.hours-carousel .carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-div.hours-carousel .carousel-button:first-of-type {
+  left: 10px;
+}
+
+.carousel-div.hours-carousel .carousel-button:last-of-type {
+  right: 10px;
 }
