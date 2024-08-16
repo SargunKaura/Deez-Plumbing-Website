@@ -109,8 +109,61 @@ function Home() {
             </div>
         );
     };
+const Carousel2 = ({ images, slidesToShow = 1, className }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isManual, setIsManual] = useState(false);
+    const totalSlides = images.length; // Number of images defines the total slides
 
-    <Carousel images={hoursImages} className="hours-carousel" />
+    const nextSlide = () => {
+        setIsManual(true);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSlides);
+    };
+
+    const prevSlide = () => {
+        setIsManual(true);
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? totalSlides - 1 : prevIndex - 1
+        );
+    };
+
+    useEffect(() => {
+        if (!isManual) {
+            const interval = setInterval(nextSlide, 3000);
+            return () => clearInterval(interval);
+        }
+    }, [currentIndex, isManual]);
+
+    return (
+        <div className={`carousel-div ${className}`}>
+            <button className="carousel-button" onClick={prevSlide}>
+                &#x2190;
+            </button>
+            <div className="carousel">
+                <div
+                    className="carousel-slide"
+                    style={{
+                        transform: `translateX(-${currentIndex * (100 / slidesToShow)}%)`,
+                        transition: 'transform 0.5s ease-in-out',
+                        width: `${100 * totalSlides}%`,
+                        display: 'flex',
+                    }}
+                >
+                    {images.map((image, index) => (
+                        <img
+                            key={index}
+                            src={image}
+                            alt={`Slide ${index}`}
+                            style={{ width: `${100 / totalSlides}%` }} // Adjust width based on the total number of images
+                        />
+                    ))}
+                </div>
+            </div>
+            <button className="carousel-button" onClick={nextSlide}>
+                &#x2192;
+            </button>
+        </div>
+    );
+};
 
     return (
 
@@ -165,7 +218,7 @@ function Home() {
 
                     </div>
                     
-                    <Carousel images={hoursImages} />
+                    <Carousel2 images={hoursImages} slidesToShow={1} className="hours-carousel" />
 
                 </section>
 
