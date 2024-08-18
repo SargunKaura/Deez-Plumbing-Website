@@ -78,7 +78,7 @@ function Home() {
     
                 return () => clearInterval(interval); // Cleanup interval on component unmount
             }
-        }, [currentIndex, isManual]);
+        }, [currentIndex, isManual, totalSlides]);
         return (
 
             <div className={`carousel-div ${className}`}>
@@ -109,61 +109,66 @@ function Home() {
             </div>
         );
     };
-const Carousel2 = ({ images, slidesToShow = 1, className }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [isManual, setIsManual] = useState(false);
-    const totalSlides = images.length; // Number of images defines the total slides
-
-    const nextSlide = () => {
-        setIsManual(true);
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSlides);
-    };
-
-    const prevSlide = () => {
-        setIsManual(true);
-        setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? totalSlides - 1 : prevIndex - 1
+    const Carousel2 = ({ images, className }) => {
+        const [currentIndex, setCurrentIndex] = useState(0);
+        const [transition, setTransition] = useState(true);
+        const [isManual, setIsManual] = useState(false); // Track user interaction
+        const totalSlides = images.length;
+    
+        const handleTransition = (newIndex) => {
+            setTransition(true);
+            setTimeout(() => {
+                setCurrentIndex(newIndex);
+            }, 500);
+        };
+    
+        const nextSlide = () => {
+            setIsManual(true); // User interaction detected
+            handleTransition((currentIndex + 1) % totalSlides);
+        };
+    
+        const prevSlide = () => {
+            setIsManual(true); // User interaction detected
+            handleTransition(currentIndex === 0 ? totalSlides - 1 : currentIndex - 1);
+        };
+    
+        useEffect(() => {
+            if (!isManual) {
+                const interval = setInterval(() => {
+                    handleTransition((currentIndex + 1) % totalSlides);
+                }, 3000); // Change slide every 3 seconds
+    
+                return () => clearInterval(interval); // Cleanup interval on component unmount
+            }
+        }, [currentIndex, isManual, totalSlides]);
+    
+        return (
+            <div className={`carousel2-div ${className}`}>
+                <button className="carousel2-button" onClick={prevSlide}>
+                    &#x2190; {/* Left arrow character code */}
+                </button>
+    
+                <div className="carousel2">
+                    <div
+                        className="carousel2-slide"
+                        style={{
+                            transform: `translateX(-${currentIndex * 100}%)`,
+                            transition: transition ? 'transform 0.3s ease-in-out' : 'none',
+                            width: `100%`
+                        }}
+                    >
+                        {images.map((image, index) => (
+                            <img key={index} src={image} alt={`Slide ${index}`} />
+                        ))}
+                    </div>
+                </div>
+    
+                <button className="carousel2-button" onClick={nextSlide}>
+                    &#x2192; {/* Right arrow character code */}
+                </button>
+            </div>
         );
     };
-
-    useEffect(() => {
-        if (!isManual) {
-            const interval = setInterval(nextSlide, 3000);
-            return () => clearInterval(interval);
-        }
-    }, [currentIndex, isManual]);
-
-    return (
-        <div className={`carousel-div ${className}`}>
-            <button className="carousel-button" onClick={prevSlide}>
-                &#x2190;
-            </button>
-            <div className="carousel">
-                <div
-                    className="carousel-slide"
-                    style={{
-                        transform: `translateX(-${currentIndex * (100 / slidesToShow)}%)`,
-                        transition: 'transform 0.5s ease-in-out',
-                        width: `${100 * totalSlides}%`,
-                        display: 'flex',
-                    }}
-                >
-                    {images.map((image, index) => (
-                        <img
-                            key={index}
-                            src={image}
-                            alt={`Slide ${index}`}
-                            style={{ width: `${100 / totalSlides}%` }} // Adjust width based on the total number of images
-                        />
-                    ))}
-                </div>
-            </div>
-            <button className="carousel-button" onClick={nextSlide}>
-                &#x2192;
-            </button>
-        </div>
-    );
-};
 
     return (
 
@@ -218,7 +223,7 @@ const Carousel2 = ({ images, slidesToShow = 1, className }) => {
 
                     </div>
                     
-                    <Carousel2 images={hoursImages} slidesToShow={1} className="hours-carousel" />
+                    <Carousel2 images={hoursImages} />
 
                 </section>
 
