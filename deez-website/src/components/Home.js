@@ -254,14 +254,22 @@ function Home() {
 
                     <div className="reviews-text">
 
-                        <h3>Reviews and Testimonials</h3>
-                        <p>Our work and reviews.</p>
+                        <h3>Testimonials</h3>
+                        <p>Examples of our work, illustrating a significant transformation and highlighting 
+                            the improvement in the depicted area.</p>
 
                     </div>
 
+                    {/* <div className="reviews-text">
+
+                        <h3>Reviews and Testimonials</h3>
+                        <p>Our work and reviews.</p>
+
+                    </div> */}
+
                     <Carousel images={images} />
 
-                    <div className="testimonials">
+                    {/* <div className="testimonials">
 
                         <div className="testimonial">
 
@@ -290,7 +298,7 @@ function Home() {
 
                         <button className = "main-button" id = "review-button">Read more Reviews</button>
 
-                    </div>
+                    </div> */}
 
                 </section>
 

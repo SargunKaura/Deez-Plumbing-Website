@@ -83,7 +83,7 @@ body {
 
 .main-button {
     
-    margin-top: 1rem;
+    margin-top: 3rem;
     padding: 1rem 2rem;
     background-color: black;
     color: white;
@@ -321,6 +321,7 @@ h1 {
     line-height: 110%; /* 44px */
     text-align: left;
 }
+
 .testimonials {
     display: flex;
     justify-content: center;
