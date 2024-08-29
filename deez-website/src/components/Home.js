@@ -78,7 +78,7 @@ function Home() {
     
                 return () => clearInterval(interval); // Cleanup interval on component unmount
             }
-        }, [currentIndex, isManual]);
+        }, [currentIndex, isManual, totalSlides]);
         return (
 
             <div className={`carousel-div ${className}`}>
@@ -109,8 +109,66 @@ function Home() {
             </div>
         );
     };
-
-    <Carousel images={hoursImages} className="hours-carousel" />
+    const Carousel2 = ({ images, className }) => {
+        const [currentIndex, setCurrentIndex] = useState(0);
+        const [transition, setTransition] = useState(true);
+        const [isManual, setIsManual] = useState(false); // Track user interaction
+        const totalSlides = images.length;
+    
+        const handleTransition = (newIndex) => {
+            setTransition(true);
+            setTimeout(() => {
+                setCurrentIndex(newIndex);
+            }, 500);
+        };
+    
+        const nextSlide = () => {
+            setIsManual(true); // User interaction detected
+            handleTransition((currentIndex + 1) % totalSlides);
+        };
+    
+        const prevSlide = () => {
+            setIsManual(true); // User interaction detected
+            handleTransition(currentIndex === 0 ? totalSlides - 1 : currentIndex - 1);
+        };
+    
+        useEffect(() => {
+            if (!isManual) {
+                const interval = setInterval(() => {
+                    handleTransition((currentIndex + 1) % totalSlides);
+                }, 3000); // Change slide every 3 seconds
+    
+                return () => clearInterval(interval); // Cleanup interval on component unmount
+            }
+        }, [currentIndex, isManual, totalSlides]);
+    
+        return (
+            <div className={`carousel2-div ${className}`}>
+                <button className="carousel2-button" onClick={prevSlide}>
+                    &#x2190; {/* Left arrow character code */}
+                </button>
+    
+                <div className="carousel2">
+                    <div
+                        className="carousel2-slide"
+                        style={{
+                            transform: `translateX(-${currentIndex * 100}%)`,
+                            transition: transition ? 'transform 0.3s ease-in-out' : 'none',
+                            width: `100%`
+                        }}
+                    >
+                        {images.map((image, index) => (
+                            <img key={index} src={image} alt={`Slide ${index}`} />
+                        ))}
+                    </div>
+                </div>
+    
+                <button className="carousel2-button" onClick={nextSlide}>
+                    &#x2192; {/* Right arrow character code */}
+                </button>
+            </div>
+        );
+    };
 
     return (
 
@@ -165,7 +223,7 @@ function Home() {
 
                     </div>
                     
-                    <Carousel images={hoursImages} />
+                    <Carousel2 images={hoursImages} />
 
                 </section>
 
@@ -196,14 +254,22 @@ function Home() {
 
                     <div className="reviews-text">
 
-                        <h3>Reviews and Testimonials</h3>
-                        <p>Our work and reviews.</p>
+                        <h3>Testimonials</h3>
+                        <p>Examples of our work, illustrating a significant transformation and highlighting 
+                            the improvement in the depicted area.</p>
 
                     </div>
 
+                    {/* <div className="reviews-text">
+
+                        <h3>Reviews and Testimonials</h3>
+                        <p>Our work and reviews.</p>
+
+                    </div> */}
+
                     <Carousel images={images} />
 
-                    <div className="testimonials">
+                    {/* <div className="testimonials">
 
                         <div className="testimonial">
 
@@ -232,7 +298,7 @@ function Home() {
 
                         <button className = "main-button" id = "review-button">Read more Reviews</button>
 
-                    </div>
+                    </div> */}
 
                 </section>
 
