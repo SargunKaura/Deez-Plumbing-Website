@@ -34,11 +34,11 @@ function Home() {
 
     const hoursImages = [
 
-        '/images/hours-image1.jpg', // images for hours of operation carousel
-        '/images/hours-image2.jpg',
-        '/images/hours-image3.jpg',
-        '/images/hours-image4.jpg',
-        '/images/hours-image5.jpg',
+        '/images/hours/hours-image1.jpg', // images for hours of operation carousel
+        '/images/hours/hours-image2.jpg',
+        '/images/hours/hours-image3.jpg',
+        '/images/hours/hours-image4.jpg',
+        '/images/hours/hours-image5.jpg',
     ];
 
     const Carousel = ({ images, className }) => {
@@ -178,7 +178,7 @@ function Home() {
                 <div className="DPL-header">
 
                     <Link to="/">
-                        <button className="DPL-header-button">DPL</button>
+                        <button  className="DPL-header-button"><img src="/dpl-logo.png" alt="DPL" /></button>
                     </Link>
 
                 </div>
@@ -313,22 +313,16 @@ function Home() {
             </main>
 
             <footer className="footer">
-
-                <div className="DPL-footer">
-
-                  <p>Deez Plumbing LTD</p>
-
-                </div>
-
-                <nav>
-
-                    <div className="footer-links">
-                        <a href="#our-mission">Our Mission</a>
-                        <a href="#book-appointment">Book an Appointment</a>
+                    <div className="DPL-footer">
+                        <p>Deez Plumbing LTD</p>
                     </div>
 
-                </nav>
-
+                    <nav>
+                        <div className="footer-links">
+                        <Link to="/OurMission">Our Mission</Link>
+                        <Link to="/BookAppointment">Book an Appointment</Link>
+                        </div>
+                    </nav>
             </footer>
 
         </div>

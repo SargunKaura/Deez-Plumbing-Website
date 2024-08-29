@@ -11,7 +11,7 @@ function OurMission() {
       <header className='header'>
         <div className='DPL-header'>
             <Link to='/'>
-                <button className='DPL-header-button'>DPL</button>
+                <button  className="DPL-header-button"><img src="/dpl-logo.png" alt="DPL" /></button>
             </Link>
         </div>
         <div className='buttons-header-DIV'>
@@ -80,16 +80,17 @@ function OurMission() {
         </div>
       </section>
 
-      <footer className='footer'>
-        <div className='DPL-footer'>
-          <p>Deez Plumbing LTD</p>
-        </div>
-        <nav>
-        <div className='footer-links'>
-          <a href='#our-mission'>Our Mission</a>
-          <a href='#book-appointment'>Book an Appointment</a>
-        </div>
-      </nav>
+      <footer className="footer">
+              <div className="DPL-footer">
+                  <p>Deez Plumbing LTD</p>
+              </div>
+
+              <nav>
+                  <div className="footer-links">
+                  <Link to="/OurMission">Our Mission</Link>
+                  <Link to="/BookAppointment">Book an Appointment</Link>
+                  </div>
+              </nav>
       </footer>
     </div>
   );

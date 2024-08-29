@@ -13,7 +13,7 @@ function BookAppointment() {
                 <div className="DPL-header">
 
                     <Link to="/">
-                    <button className="DPL-header-button">DPL</button>
+                            <button  className="DPL-header-button"><img src="/dpl-logo.png" alt="DPL" /></button>
                     </Link>
 
                 </div>
@@ -38,22 +38,16 @@ function BookAppointment() {
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSccRrGin1zW39DCzn-aZ239D8fbHqTuR69ZClj5x7ZiRhqkGA/viewform?embedded=true" width="640" height="1800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             
             <footer className="footer">
-
-                <div className="DPL-footer">
-
-                    <p>Deez Plumbing LTD</p>
-
-                </div>
-
-                <nav>
-
-                    <div className="footer-links">
-
-                        <a href="#our-mission">Our Mission</a>
-                        <a href="#book-appointment">Book an Appointment</a>
-                        
+                    <div className="DPL-footer">
+                        <p>Deez Plumbing LTD</p>
                     </div>
-                </nav>
+
+                    <nav>
+                        <div className="footer-links">
+                        <Link to="/OurMission">Our Mission</Link>
+                        <Link to="/BookAppointment">Book an Appointment</Link>
+                        </div>
+                    </nav>
             </footer>
         </div>
     );

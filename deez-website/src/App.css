@@ -29,20 +29,21 @@ body {
     padding: 1rem 3rem 1rem 3rem;
     
 }
-.DPL-header-button{
+.DPL-header-button {
+  background: none; /* Remove background if using <img> */
+  border: none; /* Remove default border */
+  padding: 0; /* Remove default padding */
+  width: 100px; /* Set the width of the button */
+  height: 100px; /* Set the height of the button */
+  display: flex; /* Use flex to center image */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
 
-    padding: 1rem 2rem 1rem 2rem;
-    color: black;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    margin-left: 0rem;
-    margin-right: 0rem;
-    font-family: IM FELL Great Primer SC;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 60px */
+.DPL-header-button img {
+  max-width: 100%; /* Ensure image fits within button */
+  max-height: 100%; /* Ensure image fits within button */
 }
 .buttons-header-DIV {
 
