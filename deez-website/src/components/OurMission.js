@@ -44,9 +44,9 @@ function OurMission() {
                   for Level 3 apprenticeship in autumn 2024. John specializes in new construction, specifically, 
                   mechanical rooms, manages a crew at his own job sites, and finishes tasks in a timely manner.</p>
                 <div className='linkedin'>
-                  <a href='john-linkedin-url'>John's LinkedIn</a>
+                  <a href='https://www.linkedin.com/in/john-d-souza-655506246/'>John's LinkedIn</a>
                   <div className='linkedin-icon'>
-                      <a href='john-linkedin-url'>
+                      <a href='https://www.linkedin.com/in/john-d-souza-655506246/'>
                           <img src='/images/LinkedIn_icon.png' alt='LinkedIn' />
                       </a>
                   </div>
