@@ -107,31 +107,98 @@ body {
     background-color:  #00796b;
 }
 
-/* H3 and P CSS */
+/* H3 and p CSS */
 
 h3{
-    margin: 0 0 1rem 0;
-    color: #000;
-    font-family: 'Inter', sans-serif;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 110%;
-    text-align: left;
+  
+  margin: 0 0 1rem 0;
+  color: #000;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(16px, 2vw + 1rem, 35px); /* Responsive font size */
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  text-align: left;
 }
 
 p { 
-    margin: 0;
-    color: #828282;
-    font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    text-align: left;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  
+  margin: 0;
+  color: #828282;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(5px, 2vw + 1rem, 20px); /* Dynamically adjusts size */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5; /* 150% is the same as line-height of 1.5 */
+  text-align: left;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
+
+/* BOOKAPPOINTMENTS CSS */
+
+form{
+
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 0 2rem 0;
+  border-radius: 10px;
+  width: 50%;
+}
+
+input{
+  
+  padding: 1rem; /* Padding inside the input */
+  border: 1px solid #00796b; /* Light border color */
+  border-radius: 0.5rem; /* Rounded corners */
+  font-family: 'Inter', sans-serif; /* Font family */
+  font-size: 1rem; /* Base font size */
+  color: #333; /* Text color */
+  transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border and shadow */
+}
+input::placeholder {
+  font-style: italic; /* Make placeholder text italic */
+}
+.question{
+
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+  text-align: left;
+}
+
+.errors{
+
+  /* border: solid red 1px; */
+  color: red;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+  padding-top: 0.5rem;
+  text-align: left;
+}
+.details p{
+
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  text-align: left;
+}
+.details li{
+
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  text-align: left;
+}
+
 /* TITLE CSS */
 
 .title {
@@ -425,8 +492,8 @@ h1 {
 }
 
 
-/* FOOTER CSS */
 
+/* FOOTER CSS */
 
 .footer {
     display: flex;
@@ -502,3 +569,4 @@ h1 {
 .carousel-div.hours-carousel .carousel-button:last-of-type {
   right: 10px;
 }
+
